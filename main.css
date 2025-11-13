@@ -19,6 +19,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 45%;
+  max-height: 500px;
+  height: fit-content;
 }
 
 #rules_container {
@@ -80,7 +82,7 @@ body {
 }
 
 #rules_container{
-  max-height: 500px;
+  max-height: 300px;
   overflow: auto;
 }
 

@@ -172,6 +172,12 @@ function addRule(rule) {
   span.textContent = rule.text;
   span.classList.add('password_rules', 'invalid_rule', 'rule-appear');
   rules_container.appendChild(span);
+
+  // Scroll
+  requestAnimationFrame(() => {
+    rules_container.scrollTop = rules_container.scrollHeight;
+    console.log("scroll");
+  })
 }
 
 // ---------------------------
