@@ -131,7 +131,6 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
   #rules_container{
     max-height: 255px;
     overflow: auto;
-    background-color: palegoldenrod;
   }
 }
 
@@ -139,7 +138,6 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
   #rules_container{
     max-height: 255px;
     overflow: auto;
-    background-color: palegoldenrod;
   }
 
   #page_title{
@@ -151,7 +149,6 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
   #rules_container{
     max-height: 255px;
     overflow: auto;
-    background-color: palegoldenrod;
   }
 
   #page_title{
@@ -164,7 +161,6 @@ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container
   #rules_container{
     max-height: 255px;
     overflow: auto;
-    background-color: palegoldenrod;
   }
 
   #page_title{
