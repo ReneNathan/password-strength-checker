@@ -1,0 +1,148 @@
+/* reset.css — moderno e opinionado (coloque isto antes dos seus estilos) */
+
+/* 1) box-sizing mais previsível */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2) remover margin/padding default e definir fonte herança */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+}
+
+/* 3) HTML5 display roles para navegadores antigos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 4) corpo e tipografia base — você pode ajustar as variáveis */
+:root{
+  --base-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --base-font-size: 16px;
+  --base-line-height: 1.5;
+  --text-color: #111;
+  --bg-color: #fff;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 5) listas sem estilos por padrão */
+ol, ul {
+  list-style: none;
+}
+
+/* 6) links sem sublinhado por padrão — estilize quando necessário */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7) imagens responsivas */
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 8) tabelas básicas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9) formularios — normalizar aparência e foco acessível */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* restaura botão nativo (opcional) */
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* foco visível consistente (importante para acessibilidade) */
+:focus {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* 10) remover placeholders de autofill styles (apenas quando quiser controlar) */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+  -webkit-text-fill-color: inherit;
+}
+
+/* 11) utilitários mínimos opcionais */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* 12) preserva reflow previsível para elementos de formulário inline */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  height: auto;
+}
+
+/* 13) evita que quebras de palavras estraguem layouts */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fim do reset — adicione abaixo seus estilos de projeto */

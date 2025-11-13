@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
+#password_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 45%;
+}
+
+#rules_container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Base style for rules */
+.password_rules {
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Animation */
+.rule-appear {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.valid_rule {
+  color: limegreen;
+}
+
+.invalid_rule {
+  color: crimson;
+}
+
+#password_value_container{
+  width: 45%;
+  margin-left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  min-height: 139.5px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+#value_title{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rules_container{
+  max-height: 500px;
+  overflow: auto;
+}
+
+.card{
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+#page_title{
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  font-weight: 600;
+  font-family: "Barriecito", system-ui;
+  border-bottom: 5px solid black;
+  text-align: center;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+footer{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: black !important;
+  text-decoration: none;
+  opacity: .4;
+}
+
+footer:hover{
+  opacity: 1;
+}
+
+/*==========================================*/
+/*Particle*/
+canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #4070f4; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
+/*==========================================*/
+/* Minimal responsive */
+@media only screen and (min-width: 1200px) and (max-width: 1875px) {
+  #rules_container{
+    max-height: 255px;
+    overflow: auto;
+    background-color: palegoldenrod;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  #rules_container{
+    max-height: 255px;
+    overflow: auto;
+    background-color: palegoldenrod;
+  }
+
+  #page_title{
+    font-size: 4rem;
+  }
+}
+/* Mobile responsive */
+@media only screen and (min-width: 426px) and (max-width: 959px) {
+  #rules_container{
+    max-height: 255px;
+    overflow: auto;
+    background-color: palegoldenrod;
+  }
+
+  #page_title{
+    font-size: 3rem;
+  }
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 425px) {
+  #rules_container{
+    max-height: 255px;
+    overflow: auto;
+    background-color: palegoldenrod;
+  }
+
+  #page_title{
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  body{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 12px
+  }
+
+  #password_value_container{
+    margin: 0;
+  }
+
+  .card{
+    width: 95% !important;
+  }
+}
