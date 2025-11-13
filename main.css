@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 
-body {
+body, #app {
   width: 100%;
   height: 100vh;
   display: flex;
